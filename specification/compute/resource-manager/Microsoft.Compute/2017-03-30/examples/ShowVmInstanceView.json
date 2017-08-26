@@ -1,74 +1,74 @@
 {
   "parameters": {
-    "api-version": "2017-03-30", 
-    "subscriptionId": "<subscription-id>", 
-    "virtualMachineName": "<vm-name>", 
+    "api-version": "2017-03-30",
+    "subscriptionId": "<subscription-id>",
+    "virtualMachineName": "<vm-name>",
     "resourceGroupName": "myRG"
-  }, 
+  },
   "responses": {
     "200": {
       "body": {
         "disks": [
           {
-            "name": "<vm-name>_OsDisk_1_7e72087aeb5144839431f6c2af577c7e", 
+            "name": "<vm-name>_OsDisk_1_7e72087aeb5144839431f6c2af577c7e",
             "statuses": [
               {
-                "time": "2017-08-18T21:42:25.6680155+00:00", 
-                "code": "ProvisioningState/succeeded", 
-                "displayStatus": "Provisioning succeeded", 
+                "time": "2017-08-18T21:42:25.6680155+00:00",
+                "code": "ProvisioningState/succeeded",
+                "displayStatus": "Provisioning succeeded",
                 "level": "Info"
               }
             ]
           }
-        ], 
+        ],
         "extensions": [
           {
-            "typeHandlerVersion": "1.5.4.4", 
-            "type": "Microsoft.Azure.Security.IaaSAntimalware", 
-            "name": "IaaSAntimalware", 
+            "typeHandlerVersion": "1.5.4.4",
+            "type": "Microsoft.Azure.Security.IaaSAntimalware",
+            "name": "IaaSAntimalware",
             "statuses": [
               {
-                "message": "Microsoft Antimalware enabled", 
-                "code": "ProvisioningState/succeeded", 
-                "displayStatus": "Provisioning succeeded", 
+                "message": "Microsoft Antimalware enabled",
+                "code": "ProvisioningState/succeeded",
+                "displayStatus": "Provisioning succeeded",
                 "level": "Info"
               }
             ]
           }
-        ], 
+        ],
         "vmAgent": {
-          "vmAgentVersion": "2.7.1198.809", 
+          "vmAgentVersion": "2.7.1198.809",
           "extensionHandlers": [
             {
               "status": {
-                "code": "ProvisioningState/succeeded", 
-                "displayStatus": "Ready", 
+                "code": "ProvisioningState/succeeded",
+                "displayStatus": "Ready",
                 "level": "Info"
-              }, 
-              "typeHandlerVersion": "1.5.4.4", 
+              },
+              "typeHandlerVersion": "1.5.4.4",
               "type": "Microsoft.Azure.Security.IaaSAntimalware"
             }
-          ], 
+          ],
           "statuses": [
             {
-              "time": "2017-08-26T01:42:36+00:00", 
-              "message": "GuestAgent is running and accepting new configurations.", 
-              "code": "ProvisioningState/succeeded", 
-              "displayStatus": "Ready", 
+              "time": "2017-08-26T01:42:36+00:00",
+              "message": "GuestAgent is running and accepting new configurations.",
+              "code": "ProvisioningState/succeeded",
+              "displayStatus": "Ready",
               "level": "Info"
             }
           ]
-        }, 
+        },
         "statuses": [
           {
-            "time": "2017-08-26T01:02:39.1529067+00:00", 
-            "code": "ProvisioningState/succeeded", 
-            "displayStatus": "Provisioning succeeded", 
+            "time": "2017-08-26T01:02:39.1529067+00:00",
+            "code": "ProvisioningState/succeeded",
+            "displayStatus": "Provisioning succeeded",
             "level": "Info"
-          }, 
+          },
           {
-            "code": "PowerState/running", 
-            "displayStatus": "VM running", 
+            "code": "PowerState/running",
+            "displayStatus": "VM running",
             "level": "Info"
           }
         ]
