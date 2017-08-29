@@ -34,6 +34,25 @@
     }
   },
   "paths": {
+    "/providers/Microsoft.Compute/operations": {
+      "get": {
+        "operationId": "ComputeOperations_Get",
+        "description": "Retrieves a list of Compute operations.",
+        "parameters": [
+          {
+            "$ref": "#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ComputeOperations"
+            }
+          }
+        }
+      }
+    },
     "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/availabilitySets/{availabilitySetName}": {
       "put": {
         "tags": [
@@ -3262,6 +3281,62 @@
     }
   },
   "definitions": {
+    "ComputeOperations": {
+      "properties": {
+        "value": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ComputeOperation"
+          },
+          "description": "The list of Compute operations."
+        }
+      },
+      "description": "The List Compute Operations operation response."
+    },
+    "ComputeOperation": {
+      "properties": {
+        "origin": {
+          "type": "string",
+          "readOnly": true,
+          "description": "The origin of the operation."
+        },
+        "name": {
+          "type": "string",
+          "readOnly": true,
+          "description": "The name of the operation."
+        },
+        "display": {
+          "x-ms-client-flatten": true,
+          "$ref": "#/definitions/ComputeOperationDisplayProperties"
+        }
+      },
+      "description": "A Compute operation."
+    },
+    "ComputeOperationDisplayProperties": {
+      "properties": {
+        "operation": {
+          "type": "string",
+          "readOnly": true,
+          "description": "A short description of the operation."
+        },
+        "resource": {
+          "type": "string",
+          "readOnly": true,
+          "description": "The type of resource the operation acts on."
+        },
+        "description": {
+          "type": "string",
+          "readOnly": true,
+          "description": "A description of the operation."
+        },
+        "provider": {
+          "type": "string",
+          "readOnly": true,
+          "description": "Which resource provider the operation is from."
+        }
+      },
+      "description": "Display information about a Compute operation."
+    },
     "InstanceViewStatus": {
       "properties": {
         "code": {
